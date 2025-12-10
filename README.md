@@ -32,25 +32,28 @@ python downloader.py --Retry ErrorLogs.json
 
 ### Opções de filtro:
 
-- **--Type**
+- --Type
   - 0: Nenhum
   - 1: Inclusivo
   - 2: Exclusivo
 
-- **--Mode**
+- --Mode
   - 0: Apenas prova
   - 1: Apenas gabarito
   - 2: Ambos
   - 3: Ambos, estrito (somente baixa se houver prova e gabarito)
 
-- **--Year**  
+- --Year  
   Baixar anos específicos
   
-- **--Title**  
-  Baixar apenas provas/gabaritos que contenham essas palavras
+- --Title  
+  Baixar apenas provas/gabaritos que contenham palavras específicas
 
-- **--Link / --Tab**  
-  Baixar apenas links ou abas específicas
+- --Tab  
+  Baixar apenas provas/gabaritos categorizados com palavras específicas
+
+- --Link  
+  Baixar apenas provas/gabaritos com links que contenham palavras específicas
 
 - **--Replace**  
   Substituir arquivos existentes
