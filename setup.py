@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="enem-extractor",
-    version="1.0.1",
+    version="1.0.2",
     description="Ferramenta para baixar provas e gabaritos do ENEM diretamente do INEP.",
     author="D3-4D",
     license="Apache-2.0",
