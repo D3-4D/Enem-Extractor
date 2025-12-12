@@ -59,7 +59,7 @@ def Download(Directory:str|None=None, Filters:list|None=None, Replacement:bool|N
 
     del Adapt
 
-    init(autoreset=True)
+    init() # Colorama
 
     Parser = ArgumentParser()
 
