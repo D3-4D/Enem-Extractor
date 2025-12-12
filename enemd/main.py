@@ -264,7 +264,7 @@ def Download(Directory:str|None=None, Filters:list|None=None, Replacement:bool|N
                                     print(f"{Fore.LIGHTRED_EX}{Item[1]} download failed.")
                                     if not str(Year) in ErrorLogs:
                                         ErrorLogs[str(Year)] = []
-                                    ErrorLogs[str(Year)].extend([Item, File, R.status_code])
+                                    ErrorLogs[str(Year)].append([Item, File, R.status_code])
                                     continue
                                 elif pathlib.exists(File) and not Replace:
                                     print(f"{Fore.LIGHTYELLOW_EX}Skipping existing file: {File}{Style.RESET_ALL}")
