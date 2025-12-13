@@ -293,8 +293,8 @@ def Download(Directory:str|None=None, Filters:list|None=None, Replacement:bool|N
                                 if not str(Year) in ErrorLogs:
                                     ErrorLogs[str(Year)] = []
                                 ErrorLogs[str(Year)].append([Item, File, repr(E)])
-        with open(ErrLogsFile, "w", encoding="utf-8") as f:
-            dump(ErrorLogs, f, indent=1)
+    with open(ErrLogsFile, "w", encoding="utf-8") as f:
+        dump(ErrorLogs, f, indent=1)
 
 if __name__ == "__main__":
     Download()
