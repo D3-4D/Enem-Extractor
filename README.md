@@ -55,8 +55,8 @@ python downloader.py --Retry ErrorLogs.json
 - --Link  
   Baixar apenas provas/gabaritos com links que contenham palavras específicas
 
-- **--Replace**  
+- --Replace
   Substituir arquivos existentes
 
-- **--Retry**  
+- --Retry
   Retomar downloads falhados a partir de um arquivo JSON de erros gerado anteriormente
