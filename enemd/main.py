@@ -260,6 +260,19 @@ if not Settings["Retry"] or Settings["Retry"].get("modular"):
 
                     Exam = Item.find('a', string='Prova') if Settings["Mode"] != 1 else None
                     Answers = Item.find('a', string='Gabarito') if Settings["Mode"] != 0 else None
+                    
+                    if Exam or Answers:
+                        for Probe in Settings["InLink"]:
+                            if Exam and (Probe in Exam["href"]) == (Settings["Type"] == 2):
+                                Exam = None
+                            
+                            if Answers and (Probe in Answers["href"]) == (Settings["Type"] == 2):
+                                Answers = None
+                    
+                    if not (Exam or Answers):
+                        if Settings["Debug"] == 3:
+                            print(f"{dbidx}{Fore.LIGHTYELLOW_EX}No files were found. Skipping.{Style.RESET_ALL}")
+                        continue
 
                     # Temporary measures for the 2017 href typos
                     if Exam and Exam.has_attr("href"):
