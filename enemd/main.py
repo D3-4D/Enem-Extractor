@@ -136,7 +136,7 @@ ErrorLogs = {}
 
 
 if not Settings["Retry"] or Settings["Retry"].get("modular"):
-    def Extract_Endpoints(Years:range|int|None=None, PageMode:bool|None=False)->dict|None:
+    def ExtractEndpoints(Years:range|int|None=None, PageMode:bool|None=False)->dict|None:
         if Settings["Debug"] > 0:
             print(f"{Fore.BLUE}Extracting api endpoints...{Style.RESET_ALL}")
 
@@ -324,7 +324,7 @@ if not Settings["Retry"] or Settings["Retry"].get("modular"):
     if Settings["Debug"] > 0:
         print(f"{Fore.LIGHTBLUE_EX}Checking endpoint availability...{Style.RESET_ALL}")
 
-    _test = Extract_Endpoints(1998, True)
+    _test = ExtractEndpoints(1998, True)
     if not _test:
         raise SystemError("Request failed. Verify packages for version mismatch or file corruption.")
     if not (200 <= _test.status_code < 300):
@@ -453,7 +453,7 @@ def Download(Endpoints: dict, Directory:str|None):
            
 
 if __name__ == "__main__":
-    Download(Endpoints=Settings["Retry"] if Settings["Retry"] else Extract_Endpoints(), Directory=AskDir())
+    Download(Endpoints=Settings["Retry"] if Settings["Retry"] else ExtractEndpoints(), Directory=AskDir())
 
     with open(ErrLogsFile, "w", encoding="utf-8") as f:
         dump(ErrorLogs, f, indent=1)
