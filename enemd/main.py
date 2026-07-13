@@ -414,7 +414,7 @@ def Download(Endpoints: dict, Directory:str|None):
                                     if Attempt == 5:
                                         raise e
                                 
-                                del __temp
+                                del _temp
                             if Bar:
                                 TempBar.refresh()
                                 TempBar.close()
