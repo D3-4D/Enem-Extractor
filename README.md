@@ -1,7 +1,3 @@
-Aqui está a versão atualizada do seu README, mantendo a estrutura e o idioma (português) do original, mas complementado e corrigido para refletir exatamente o que o seu novo código faz (como os novos argumentos do CLI, uso de threads, sistema de retry resiliente e as correções internas).
-
----
-
 # Enem Extractor
 
 Script multi-threaded de alta performance para baixar provas e gabaritos do ENEM diretamente do site oficial do INEP.
