@@ -415,7 +415,6 @@ def Download(Endpoints: dict, Directory:str|None):
                                         raise e
                                 
                                 del __temp
-                            CurrDownlads += 1
                             if Bar:
                                 TempBar.refresh()
                                 TempBar.close()
