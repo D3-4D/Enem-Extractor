@@ -134,8 +134,7 @@ init() # Colorama
 ErrLogsFile = path.join(path.dirname(path.abspath(__file__)), "ErrorLogs.json")
 ErrorLogs = {}
 
-
-if not Settings["Retry"] or Settings["Retry"].get("modular"):
+if __name__ != "__main__" or not Settings["Retry"] or Settings["Retry"].get("modular"):
     def ExtractEndpoints(Years:range|int|None=None, PageMode:bool|None=False)->dict|None:
         if Settings["Debug"] > 0:
             print(f"{Fore.BLUE}Extracting api endpoints...{Style.RESET_ALL}")
